@@ -1,0 +1,11 @@
+<?php
+include('.dpconn.php');
+$data=$conn->query("SELECT*from students")->fetchAll();
+$query="update students
+SETemail='ahamed-56@gmail.com'
+WHERE student_id=2;"
+$stmt=$conn->prepare($query);
+$stmt->execute();
+ech"<br>".$stmt->rowCount()."row ubdated successfuly";
+
+?>
